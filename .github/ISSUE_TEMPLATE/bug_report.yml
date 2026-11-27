@@ -1,0 +1,49 @@
+name: Bug report
+description: A crash, black screen, glitch or performance problem
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please do NOT attach or link game files, and do not ask where to get them: such issues are closed.
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU and driver
+      placeholder: "RX 6900 XT 16 GB, Adrenalin 26.11.2"
+    validations:
+      required: true
+  - type: input
+    id: cpu_ram
+    attributes:
+      label: CPU and RAM
+      placeholder: "Ryzen 7 5800X3D, 32 GB"
+    validations:
+      required: true
+  - type: dropdown
+    id: launcher
+    attributes:
+      label: Launcher used
+      options: ["BEST", "Frame Gen", "MAX GRAPHICS", "Other / custom"]
+    validations:
+      required: true
+  - type: input
+    id: release
+    attributes:
+      label: Release version
+      placeholder: "v2026.11.27"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Drag in the newest file from `_victory-logs\` (run-*.log). Crash logs from `%LOCALAPPDATA%\victory\data\` help too.
+    validations:
+      required: true
